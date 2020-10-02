@@ -1830,6 +1830,13 @@
           </initialOperation>
         </actions>
       </groups>
+      <overrides xsi:type="properties:GroupOverrideDescription" name="eclass icon" domainClass="ecore::EClassifier" overrides="//@extensions.0/@categories.0/@groups.0">
+        <controls xsi:type="properties:ButtonDescription" name="selectIcon" labelExpression="Associated Icon:" helpExpression="CLick on button to select an icon" imageExpression="aql:self.eInverse(genmodel::GenClass).getEClassItemIconPath()->first()">
+          <initialOperation>
+            <firstModelOperations xsi:type="tool:ChangeContext" browseExpression="var:self"/>
+          </initialOperation>
+        </controls>
+      </overrides>
     </categories>
   </extensions>
 </description:Group>
